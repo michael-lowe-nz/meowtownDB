@@ -5,6 +5,7 @@ var getAllCats = require('../db/getAllCats').getAllCats
 var getCatByID = require('../db/getCatByID').getCatByID
 var createCat = require('../db/createCat').createCat
 var deleteCatByID = require('../db/deleteCatByID').deleteCatByID
+var incrementViews = require('../db/incrementViews').incrementViews
 
 router.get('/new', function(req, res, next){
   console.log("at new route")
@@ -34,6 +35,7 @@ router.post('/:id/delete', function(req, res, next){
 router.get('/:id', function(req, res, next){
   getCatByID(req.params.id)
     .then(function(catFromDB){
+      // incrementViews(req.params.id)
       res.render('catShow', catFromDB[0])
     })
     .catch(function(err){

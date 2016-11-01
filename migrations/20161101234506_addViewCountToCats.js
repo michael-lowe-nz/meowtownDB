@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.table('cats', function(table){
-      table.integer('views');
+      table.integer('views').defaultTo(0);
     })
 };
 
