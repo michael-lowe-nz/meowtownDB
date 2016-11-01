@@ -30,8 +30,8 @@ header {
 }
 
 .cat-box {
-  display: flex;
   text-align: center;
+  margin: 0 auto;
 }
 
 nav {
