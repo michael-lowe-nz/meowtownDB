@@ -1,0 +1,10 @@
+<div class="cat-box">
+  <div class="cat">
+    <h2>{{name}}</h2>
+    <img src="{{this.image}}">
+    <p>{{story}}</p>
+  </div>
+</div>
+<form action="/cats/{{id}}/delete" method="post">
+  <input type="submit" class="button" value="Delete this Cat!"/>
+</form>

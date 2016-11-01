@@ -1,11 +1,11 @@
 <div class="cat-box">
+  {{#each cats}}
   <div class="cat">
-    {{#each cats}}
     <a href="/cats/{{id}}">
       <h2>{{name}}</h2>
       <img src="{{this.image}}">
-      <p>{{story}}</p>
+      <p class="description">{{story}}</p>
     </a>
-    {{/each}}
   </div>
+  {{/each}}
 </div>

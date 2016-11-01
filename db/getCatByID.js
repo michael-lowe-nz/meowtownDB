@@ -8,5 +8,6 @@ module.exports = {
 }
 
 function getCatByID(idToFind){
-  return knex('cats').where({id: idToFind})
+  return knex('cats')
+    .where({id: idToFind})
 }
