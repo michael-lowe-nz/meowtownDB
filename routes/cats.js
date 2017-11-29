@@ -8,7 +8,7 @@ var deleteCatByID = require('../db/deleteCatByID').deleteCatByID
 var incrementViews = require('../db/incrementViews').incrementViews
 
 router.get('/new', function(req, res, next){
-  console.log("at new route")
+  console.log("at new route, creting new cat")
   res.render('new')
 })
 
