@@ -45,9 +45,7 @@ router.get('/:id', function(req, res, next){
 
 
 router.post('/', function(req, res, next){
-  console.log("posting to cats")
   var newCat = req.body
-  console.log("New cat info: ", newCat)
   createCat(newCat.name, newCat.story, newCat.image)
     .then(function(){
       res.redirect('/cats')
